@@ -5,12 +5,13 @@
             "autofix": true
         },
         {
-            "language": "html",
+            "language": "vue",
             "autofix": true
         },
         {
-            "language": "html",
+            "language": "javascript",
             "autofix": true
         }
-    ]
+    ],
+    "eslint.autoFixOnSave": true
 }
