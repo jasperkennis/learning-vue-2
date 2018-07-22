@@ -43,6 +43,9 @@ export default {
   updated() {
     this.emitSelectedPart();
   },
+  created() {
+    this.emitSelectedPart();
+  },
   methods: {
     emitSelectedPart() {
       this.$emit('partSelected', this.selectedPart);
