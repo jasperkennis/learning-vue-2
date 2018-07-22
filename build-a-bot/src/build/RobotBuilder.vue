@@ -4,6 +4,7 @@
       <div class="top part">
         <div class="robot-name">
           {{selectedRobot.head.title}}
+          <span v-if="selectedRobot.head.onSale" class="sale">Sale!</span>
         </div>
         <img :src="selectedRobot.head.src" title="head"/>
         <button @click="selectPreviousHead()" class="prev-selector">&#9668;</button>
@@ -233,5 +234,9 @@ export default {
   text-align: center;
   top: -25px;
   width: 100%;;
+}
+
+.sale {
+  color: red;;
 }
 </style>
