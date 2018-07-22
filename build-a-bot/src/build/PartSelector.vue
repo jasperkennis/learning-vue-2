@@ -47,7 +47,7 @@ export default {
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .part {
   position: relative;
   width:165px;
@@ -108,18 +108,29 @@ export default {
   width: 25px;
   height: 171px;
 }
-.left .prev-selector:after,  .right .prev-selector:after{
-  content: '\25B2'
+.left,
+.right {
+  .prev-selector:after {
+    content: '\25B2'
+  }
+
+  .next-selector:after {
+    content: '\25BC'
+  }
 }
-.left .next-selector:after, .right .next-selector:after {
-  content: '\25BC'
+
+.top,
+.bottom,
+.center {
+  .prev-selector:after {
+    content: '\25C4';
+  }
+
+  .next-selector:after {
+    content: '\25BA';
+  }
 }
-.top .prev-selector:after, .bottom .prev-selector:after, .center .prev-selector:after{
-  content: '\25C4'
-}
-.top .next-selector:after, .bottom .next-selector:after, .center .next-selector:after{
-  content: '\25BA'
-}
+
 .center .prev-selector, .center .next-selector {
   opacity:0.8;
 }
