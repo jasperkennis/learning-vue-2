@@ -40,7 +40,7 @@ export default {
       return this.parts[this.selectedPartIndex];
     },
   },
-  created() {
+  updated() {
     this.emitSelectedPart();
   },
   methods: {
@@ -52,16 +52,12 @@ export default {
         this.selectedPartIndex,
         this.parts.length,
       );
-
-      this.emitSelectedPart();
     },
     selectPreviousPart() {
       this.selectedPartIndex = getPreviousValidIndex(
         this.selectedPartIndex,
         this.parts.length,
       );
-
-      this.emitSelectedPart();
     },
   },
 };
