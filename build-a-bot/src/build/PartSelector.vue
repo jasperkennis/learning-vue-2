@@ -52,7 +52,7 @@ export default {
         name: 'Parts',
         params: {
           id: this.selectedPart.id,
-          type: this.selectedPart.type,
+          partType: this.selectedPart.type,
         },
       });
     },
