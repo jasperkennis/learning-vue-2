@@ -12,7 +12,7 @@ export default new Router({
     path: '/',
   }, {
     component: RobotBuilder,
-    name: 'RobotBuilder',
+    name: 'Build',
     path: '/build',
   }],
 });
