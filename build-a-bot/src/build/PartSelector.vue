@@ -1,5 +1,5 @@
 <template>
-  <div class="part">
+  <div class="part" :class="position">
     <img :src="selectedPart.src" title="arm"/>
     <button @click="selectPreviousPart()" class="prev-selector"></button>
     <button @click="selectNextPart()" class="next-selector"></button>
@@ -22,7 +22,7 @@ export default {
   data() {
     return { selectedPartIndex: 0 };
   },
-  props: ['parts'],
+  props: ['parts', 'position'],
   computed: {
     selectedPart() {
       return this.parts[this.selectedPartIndex];
