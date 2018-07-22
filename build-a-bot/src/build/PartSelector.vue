@@ -46,18 +46,22 @@ export default {
         this.selectedPartIndex,
         this.parts.length,
       );
+
+      this.$emit('partSelected', this.selectedPart);
     },
     selectPreviousPart() {
       this.selectedPartIndex = getPreviousValidIndex(
         this.selectedPartIndex,
         this.parts.length,
       );
+
+      this.$emit('partSelected', this.selectedPart);
     },
 
   },
 };
-
 </script>
+
 
 <style scoped lang="scss">
 .part {
