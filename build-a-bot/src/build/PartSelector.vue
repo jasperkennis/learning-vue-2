@@ -22,7 +22,19 @@ export default {
   data() {
     return { selectedPartIndex: 0 };
   },
-  props: ['parts', 'position'],
+  props: {
+    parts: {
+      type: Array,
+      required: true,
+    },
+    position: {
+      type: String,
+      required: true,
+      validator(value) {
+        return ['top', 'left', 'center', 'right', 'bottom'].includes(value);
+      },
+    },
+  },
   computed: {
     selectedPart() {
       return this.parts[this.selectedPartIndex];
