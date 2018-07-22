@@ -29,7 +29,7 @@
       <PartSelector
         :parts="availableParts.bases"
         position="bottom"
-        @partSelected="part => selectedRobot.base = part" /> />
+        @partSelected="part => selectedRobot.base = part" />
     </div>
     <div>
       <h1>Cart</h1>
@@ -58,9 +58,6 @@ import PartSelector from './PartSelector.vue';
 export default {
   name: 'RobotBuilder',
   components: { PartSelector },
-  created() {
-    console.log('created');
-  },
   data() {
     return {
       cart: [],

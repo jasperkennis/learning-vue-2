@@ -57,7 +57,6 @@ export default {
 
       this.$emit('partSelected', this.selectedPart);
     },
-
   },
 };
 </script>
