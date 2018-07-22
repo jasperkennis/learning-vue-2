@@ -37,6 +37,9 @@
 <script>
 export default {
   name: 'RobotBuilder',
+  data() {
+    return {};
+  },
 };
 </script>
 
