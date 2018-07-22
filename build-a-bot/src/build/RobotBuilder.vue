@@ -2,7 +2,7 @@
   <div class="content">
     <button class="add-to-cart" @click="addToCart()">Add to cart</button>
     <div class="top-row">
-      <div class="top part">
+      <div :class="[salesBorderClass, 'top', 'part']">
         <div class="robot-name">
           {{selectedRobot.head.title}}
           <span v-if="selectedRobot.head.onSale" class="sale">Sale!</span>
@@ -92,6 +92,9 @@ export default {
         base: availableParts.bases[this.selectedBaseIndex],
       };
     },
+    salesBorderClass() {
+      return this.selectedRobot.head.onSale ? 'sales-border' : null;
+    },
   },
   methods: {
     addToCart() {
@@ -173,7 +176,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .part {
   position: relative;
   width:165px;
@@ -272,6 +275,10 @@ export default {
 
 .sale {
   color: red;;
+}
+
+.sales-border {
+  border-color: red;
 }
 
 .content {
