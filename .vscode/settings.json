@@ -2,15 +2,15 @@
     "eslint.validate": [
         {
             "language": "html",
-            "autofix": true
+            "autoFix": true
         },
         {
             "language": "vue",
-            "autofix": true
+            "autoFix": true
         },
         {
             "language": "javascript",
-            "autofix": true
+            "autoFix": true,
         }
     ],
     "eslint.autoFixOnSave": true
