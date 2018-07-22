@@ -40,14 +40,20 @@ export default {
       return this.parts[this.selectedPartIndex];
     },
   },
+  created() {
+    this.emitSelectedPart();
+  },
   methods: {
+    emitSelectedPart() {
+      this.$emit('partSelected', this.selectedPart);
+    },
     selectNextPart() {
       this.selectedPartIndex = getNextValidIndex(
         this.selectedPartIndex,
         this.parts.length,
       );
 
-      this.$emit('partSelected', this.selectedPart);
+      this.emitSelectedPart();
     },
     selectPreviousPart() {
       this.selectedPartIndex = getPreviousValidIndex(
@@ -55,7 +61,7 @@ export default {
         this.parts.length,
       );
 
-      this.$emit('partSelected', this.selectedPart);
+      this.emitSelectedPart();
     },
   },
 };
