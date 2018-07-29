@@ -6,6 +6,7 @@ import RobotArms from '../parts/RobotArms.vue';
 import RobotTorsos from '../parts/RobotTorsos.vue';
 import RobotBases from '../parts/RobotBases.vue';
 import HomePage from '../home/HomePage.vue';
+import ShoppingCart from '../cart/ShoppingCart.vue';
 import SidebarBuild from '../sidebars/SidebarBuild.vue';
 import SidebarStandard from '../sidebars/SidebarStandard.vue';
 import PartInfo from '../parts/PartInfo.vue';
@@ -60,5 +61,9 @@ export default new Router({
     name: 'Parts',
     path: '/parts/:partType/:id',
     props: true,
+  }, {
+    component: ShoppingCart,
+    name: 'Cart',
+    path: '/cart',
   }],
 });
