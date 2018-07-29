@@ -14,6 +14,7 @@ import RobotBuilder from '../build/RobotBuilder.vue';
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [{
     components: {
       default: HomePage,
