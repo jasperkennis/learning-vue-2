@@ -61,7 +61,7 @@ main {
 header {
   background-color: #999;
   margin: 0 auto;
-  width: 11184px;
+  width: 1184px;
 }
 
 ul {
