@@ -102,12 +102,11 @@ export default {
         robot.torso.cost +
         robot.rightArm.cost +
         robot.base.cost;
-      this.cart.push(Object.assign(
+
+      this.$store.commit('addRobotToCart', Object.assign(
         {},
         robot,
-        {
-          cost,
-        },
+        { cost },
       ));
     },
   },
