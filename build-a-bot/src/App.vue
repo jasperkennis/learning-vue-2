@@ -17,9 +17,14 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <router-view />
-    </main>
+    <div class="container">
+      <aside class="aside">
+        <router-view name="sidebar" />
+      </aside>
+      <main>
+        <router-view />
+      </main>
+    </div>
   </div>
 </template>
 
@@ -44,7 +49,7 @@ body {
 
 main {
   background: #fff;
-  margin: 0 auto;
+  min-height: 300px;
   padding: 30px;
   width: 1024px;
 }
@@ -52,7 +57,7 @@ main {
 header {
   background-color: #999;
   margin: 0 auto;
-  width: 1084px;
+  width: 11184px;
 }
 
 ul {
@@ -79,5 +84,18 @@ ul {
 
 .router-link-active {
   color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto 0 auto;
+}
+
+.aside {
+  background-color: #aaa;
+  min-height: 300px;
+  padding: 30px;
+  width: 100px;
 }
 </style>

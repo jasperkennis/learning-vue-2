@@ -6,6 +6,8 @@ import RobotArms from '../parts/RobotArms.vue';
 import RobotTorsos from '../parts/RobotTorsos.vue';
 import RobotBases from '../parts/RobotBases.vue';
 import HomePage from '../home/HomePage.vue';
+import SidebarBuild from '../sidebars/SidebarBuild.vue';
+import SidebarStandard from '../sidebars/SidebarStandard.vue';
 import PartInfo from '../parts/PartInfo.vue';
 import RobotBuilder from '../build/RobotBuilder.vue';
 
@@ -13,11 +15,17 @@ Vue.use(Router);
 
 export default new Router({
   routes: [{
-    component: HomePage,
+    component: {
+      default: HomePage,
+      sidebar: SidebarStandard,
+    },
     name: 'Home',
     path: '/',
   }, {
-    component: RobotBuilder,
+    component: {
+      default: RobotBuilder,
+      sidebar: SidebarBuild,
+    },
     name: 'Build',
     path: '/build',
   }, {
