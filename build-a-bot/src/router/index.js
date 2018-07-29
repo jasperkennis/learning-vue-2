@@ -15,14 +15,14 @@ Vue.use(Router);
 
 export default new Router({
   routes: [{
-    component: {
+    components: {
       default: HomePage,
       sidebar: SidebarStandard,
     },
     name: 'Home',
     path: '/',
   }, {
-    component: {
+    components: {
       default: RobotBuilder,
       sidebar: SidebarBuild,
     },
